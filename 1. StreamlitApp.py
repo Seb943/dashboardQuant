@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 ################### 0 - Initialization ###################
 # 0 - Load files
 # df = pd.read_excel(r"C:\Users\Utilisateur\Desktop\_Betting2024\Data\Outputs\EDA\tennis\Backtests\Top\20240828\backtest_KNN50_250_fav0.55.xlsx")
-df = pd.read_excel("backtest_KNN50_250_fav0.55.xlsx")
+df = pd.read_excel("./Data/backtest_KNN50_250_fav0.55.xlsx")
 df = df[["('Date', 'Date')", "('Other', 'tournament-name')", "('Player', 'p1')", "('Player', 'p2')","('Other', 'maxOdds_1')","('Other', 'maxOdds_2')", 'modelProba1', 'modelProba2', "('modelPred', '')", 'valueBetModel', 'PL_favoriteBetModel']]
 df.columns = ["Date", "Tournament", "P1", "P2","maxOdds_1","maxOdds_2", 'modelProba1', 'modelProba2', "modelPred", 'valueBetModel', 'PL_favoriteBetModel']
 df['PnL'] = df['PL_favoriteBetModel']
