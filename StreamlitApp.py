@@ -40,7 +40,7 @@ def convert_df(df):
     # IMPORTANT: Cache the conversion to prevent computation on every rerun
     return df.to_csv().encode("utf-8")
 csv = convert_df(df)
-st.download_button(label = 'Download full file', data = csv)
+st.download_button(label = 'Download full file', data = csv, file_name = 'Backtest.csv')
 
 # II - Show last 20 matches
 st.subheader('Last 20 games')
